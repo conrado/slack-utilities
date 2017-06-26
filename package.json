@@ -1,0 +1,22 @@
+{
+  "name": "slack-utilities",
+  "version": "0.0.1",
+  "description": "slack utilities",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/conrado/slack-utilities.git"
+  },
+  "author": "Conrado Buhrer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/conrado/slack-utilities/issues"
+  },
+  "homepage": "https://github.com/conrado/slack-utilities#readme",
+  "dependencies": {
+    "@slack/client": "^3.10.0",
+    "lodash": "^4.17.4"
+  }
+}
