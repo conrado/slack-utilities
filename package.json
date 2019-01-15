@@ -1,6 +1,6 @@
 {
   "name": "slack-utilities",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "slack utilities",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,6 +17,7 @@
   "homepage": "https://github.com/conrado/slack-utilities#readme",
   "dependencies": {
     "@slack/client": "^3.10.0",
+    "commander": "^2.19.0",
     "lodash": "^4.17.4"
   }
 }
