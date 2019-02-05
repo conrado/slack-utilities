@@ -1,10 +1,11 @@
+#!/usr/bin/env node
+
 var commander = require('commander')
 var SlackWebClient = require('@slack/client').WebClient
 var _ = require('lodash')
 
 var token = process.env.SLACK_BOT_TOKEN || ''
 var slackweb = new SlackWebClient(token)
-
 
 function get_number(channel_name) {
   var splitted = channel_name.split('im-')
@@ -31,10 +32,16 @@ function leave_channels(CHANNELS_TO_LEAVE) {
 }
 
 commander
+  .usage('-f <from> -t <to>')
   .option('-f, --from <n>', 'From channel (inclusive)')
   .option('-t, --to <n>', 'To channel (exclusive)')
   .version('0.0.2', '-v, --version')
   .parse(process.argv)
+
+if(typeof commander.from === 'undefined' && typeof commander.to === 'undefined') {
+  commander.outputHelp()
+  process.exit(1)
+}
 
 var CHANNELS_TO_LEAVE = _.range(commander.from, commander.to)
 
